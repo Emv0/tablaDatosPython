@@ -1,0 +1,3 @@
+Hacer lo mismo de analisis calidad aire con ruido y siembra
+sumar los datos y dividirlos para sacar un promedio
+simular datos sucios (suciedad(sin,-,nan) eliminar)
