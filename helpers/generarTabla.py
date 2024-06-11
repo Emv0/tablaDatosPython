@@ -4,7 +4,7 @@ def crearTablaHtml(dataFrame,nombreTabla):
     #volvemos el dataframe en html
     archivoHTML = dataFrame.to_html()
 
-    archivo = open(f"./tables/{nombreTabla}.html","w")
+    archivo = open(f"./tables/{nombreTabla}.html","w",encoding='utf-8')
     #Escribimos la info en el archivo
     archivo.write(
     '''

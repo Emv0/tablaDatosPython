@@ -1,6 +1,5 @@
 import pandas as pd
 from helpers.generarTabla import crearTablaHtml
-
 from data.generators.generadorCalidadAire import generarDatosCalidadAire
 
 #1. PARA ANALIZAR DATOS CON PYTHON DEBEMOS CONSTRUIR UN DATAFRAME
@@ -16,8 +15,8 @@ def construirDataFrameCalidadAire():
 
     #1. LIMPIANDO (REEMPLAZANDO VALORES)
     # print(calidadAireDf)
-    # calidadAireDf.replace('-',pd.NA,inplace=True)
-    # calidadAireDf.replace('sin',pd.NA,inplace=True)
+    calidadAireDf.replace('-',pd.NA,inplace=True)
+    calidadAireDf.replace('sin',pd.NA,inplace=True)
 
     #2. Limpiando (Eliminando valores)
     calidadAireDf.replace('sin',pd.NA,inplace=True)
@@ -32,16 +31,17 @@ def construirDataFrameCalidadAire():
     #Consultar datos especificos
     # filtroICAPositivo = calidadAireDf.query("(ICA>=20)and(ICA<50)")
     # filtroICAModerado = calidadAireDf.query("(ICA>=50)and(ICA<70)")
-    filtroICAPeligroso = calidadAireDf.query("(ICA>=70)").value_counts()
+    # filtroICAPeligroso = calidadAireDf.query("(ICA>=70)").value_counts()
 
 
     # print(filtroICAPositivo)
     # print(filtroICAModerado)
-    print(filtroICAPeligroso)
+    # print(filtroICAPeligroso)
 
     #PROBANDO
     # print("\n")
-    # print(calidadAireDf)
-    #crearTablaHtml(calidadAireDf,"calidadAire")
+    print(calidadAireDf)
+    crearTablaHtml(calidadAireDf, "calidadAire")
+
 
 construirDataFrameCalidadAire()
